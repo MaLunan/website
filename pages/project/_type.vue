@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  scrollToTop: true,
+  scrollToTop: false,
   data() {},
   asyncData({ params }) {
     switch (params.type) {

@@ -7,8 +7,8 @@
       <!-- 导航 -->
       <ul class="nav">
         <nuxt-link to="/" tag="li">首页</nuxt-link>
-        <nuxt-link to="/product" tag="li">产品展示</nuxt-link>
-        <nuxt-link to="/project" tag="li">工程案例</nuxt-link>
+        <nuxt-link :to="{name:'product',params:{scrollToTop:true}}" tag="li">产品展示</nuxt-link>
+        <nuxt-link :to="{name:'project',params:{scrollToTop:true}}" tag="li">工程案例</nuxt-link>
         <nuxt-link to="/news" tag="li">新闻资讯</nuxt-link>
         <nuxt-link to="/about" tag="li">关于我们</nuxt-link>
         <nuxt-link to="/contact" tag="li">联系我们</nuxt-link>

@@ -19,27 +19,27 @@
 
 <script>
 export default {
-  scrollToTop: true,
+  scrollToTop: false,
   data() {},
   mounted() {},
-  beforeRouteUpdate(to, from, next) {
-    // 在当前路由改变，但是该组件被复用时调用
-    // 举例来说，对于一个带有动态参数的路径 /foo/:id，在 /foo/1 和 /foo/2 之间跳转的时候，
-    // 由于会渲染同样的 Foo 组件，因此组件实例会被复用。而这个钩子就会在这个情况下被调用。
-    // 可以访问组件实例 `this`
-    console.log(
-      document.documentElement.scrollTop,
-      "嘻嘻",
-      to,
-      "啊啊啊啊",
-      from
-    );
-    window.scrollTo(700, 0);
-    // let scroll = document.documentElement && document.documentElement.scrollTop;
-    // window.localStorage.setItem("scroll", scroll);
-    console.log(document.documentElement.scrollTop, "哈哈");
-    next();
-  },
+  // beforeRouteUpdate(to, from, next) {
+  //   // 在当前路由改变，但是该组件被复用时调用
+  //   // 举例来说，对于一个带有动态参数的路径 /foo/:id，在 /foo/1 和 /foo/2 之间跳转的时候，
+  //   // 由于会渲染同样的 Foo 组件，因此组件实例会被复用。而这个钩子就会在这个情况下被调用。
+  //   // 可以访问组件实例 `this`
+  //   console.log(
+  //     document.documentElement.scrollTop,
+  //     "嘻嘻",
+  //     to,
+  //     "啊啊啊啊",
+  //     from
+  //   );
+  //   window.scrollTo(700, 0);
+  //   // let scroll = document.documentElement && document.documentElement.scrollTop;
+  //   // window.localStorage.setItem("scroll", scroll);
+  //   console.log(document.documentElement.scrollTop, "哈哈");
+  //   next();
+  // },
   asyncData({ params }) {
     switch (params.type) {
       case "check":
